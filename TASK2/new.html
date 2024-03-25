@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="hello.css">
+    <title>landing page</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Creativity World</a></div>
+            <ul class="links">
+                <li><a href="Hero">Home</a></li>
+                <li><a href="Services">About</a></li>
+                <li><a href="Content">Content</a></li>
+                <li><a href="Contact">Contact</a></li>
+
+            </ul>
+            <a href="#" class="action-button">Book now</a>
+
+            <div class="toggle-button">
+                <i class="fa-solid fa-list"></i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu">
+            <li><a href="Hero">Home</a></li>
+            <li><a href="Services">About</a></li>
+            <li><a href="content">Content</a></li>
+            <li><a href="Contact">Contact</a></li>
+            <li><a href="#" class="action-button">Create </a></li>
+        </div>
+
+    </header>
+
+    <main>
+        <section>
+            <br>
+            <h1 class="h1">Creative Writing Website</h1>
+            <br>
+            <br>
+            <p class="para">
+                 Hello! In this website we can post our Creative Writings. <br> This will be helpful to improve our Creativity Skills.<br> Get to know more about yourself.  
+            </p>
+            <button class="read-more-button">Read More</button>
+        </section>
+    </main>
+
+    <script>
+        const toggleButton = document.querySelector('.toggle-button')
+        const toggleButtonIcon = document.querySelector('.toggle-button i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        toggleButton.onclick = function() {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleButtonIcon.classList = isOpen ?
+                'fa-regular fa-xmark' :
+                'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>
